@@ -10,24 +10,24 @@
     <div class="calculator">
         <div class="display" id="display">0</div>
         <div class="buttons">
-            <button class="btn" onclick="clearDisplay()">C</button>
-            <button class="btn" onclick="deleteLast()">DEL</button>
-            <button class="btn" onclick="appendOperator('/')">/</button>
-            <button class="btn" onclick="appendOperator('*')">*</button>
-            <button class="btn" onclick="appendNumber('7')">7</button>
-            <button class="btn" onclick="appendNumber('8')">8</button>
-            <button class="btn" onclick="appendNumber('9')">9</button>
-            <button class="btn" onclick="appendOperator('-')">-</button>
-            <button class="btn" onclick="appendNumber('4')">4</button>
-            <button class="btn" onclick="appendNumber('5')">5</button>
-            <button class="btn" onclick="appendNumber('6')">6</button>
-            <button class="btn" onclick="appendOperator('+')">+</button>
-            <button class="btn" onclick="appendNumber('1')">1</button>
-            <button class="btn" onclick="appendNumber('2')">2</button>
-            <button class="btn" onclick="appendNumber('3')">3</button>
-            <button class="btn equal" onclick="calculate()">=</button>
-            <button class="btn zero" onclick="appendNumber('0')">0</button>
-            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn" id="clear" onclick="clearDisplay()">C</button>
+            <button class="btn" id="delete" onclick="deleteLast()">DEL</button>
+            <button class="btn" id="divisor" onclick="appendOperator('/')">/</button>
+            <button class="btn" id="multiplicate" onclick="appendOperator('*')">*</button>
+            <button class="btn" id="number7" onclick="appendNumber('7')">7</button>
+            <button class="btn" id="number8" onclick="appendNumber('8')">8</button>
+            <button class="btn" id="number" onclick="appendNumber('9')">9</button>
+            <button class="btn" id="substract" onclick="appendOperator('-')">-</button>
+            <button class="btn" id="number4" onclick="appendNumber('4')">4</button>
+            <button class="btn" id="number5" onclick="appendNumber('5')">5</button>
+            <button class="btn" id="number6" onclick="appendNumber('6')">6</button>
+            <button class="btn" id="sum" onclick="appendOperator('+')">+</button>
+            <button class="btn" id="number1" onclick="appendNumber('1')">1</button>
+            <button class="btn" id="number2" onclick="appendNumber('2')">2</button>
+            <button class="btn" id="number3" onclick="appendNumber('3')">3</button>
+            <button class="btn equal" id="equal" onclick="calculate()">=</button>
+            <button class="btn zero" id="number0" onclick="appendNumber('0')">0</button>
+            <button class="btn" id="point" onclick="appendNumber('.')">.</button>
         </div>
     </div>
     <script src="script.js"></script>
