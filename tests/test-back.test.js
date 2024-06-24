@@ -1,3 +1,5 @@
+// Tests de calcul pour la calculatrice
+
 const { add, subtract, multiply, divide } = require('../public/script');
 
 test('adds 1 + 2 to equal 3', () => {
