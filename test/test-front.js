@@ -6,7 +6,12 @@ describe("Selenium tests", function() {
     let driver;
 
     before(async function () {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
+        let chromeOptions = new chrome.Options();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+    
+        driver = await new Builder().forBrowser(Browser.CHROME).setChromeOptions(chromeOptions).build();
         await driver.get("http://127.0.0.1:3333");
     });
 
