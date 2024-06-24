@@ -58,24 +58,3 @@ jobs:
 
       - name: Run tests
         run: npm run jest:ci
-
-      - name: Collect coverage data
-        if: always()
-        run: |
-          mkdir -p coverage
-          mv coverage/cobertura-coverage.xml cobertura-coverage.xml
-          mv junit.xml junit.xml
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: junit.xml
-
-      - name: Upload coverage results
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage-results
-          path: cobertura-coverage.xml
