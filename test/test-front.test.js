@@ -3,7 +3,7 @@ const chrome = require('selenium-webdriver/chrome');
 var assert = require('assert');
 
 describe("Selenium tests", function() {
-    // this.timeout(30000);
+    this.timeout(30000);
     let driver;
 
     before(async function () {
