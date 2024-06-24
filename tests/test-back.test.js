@@ -47,3 +47,7 @@ test('divide -20 / 5 to equal -4', () => {
 test('divide 12.4 / 3.7 to equal 3.35', () => {
     expect(divide(12.4,3.7)).toBe(3.3513513513513513);
 });
+
+test('divide by 0', () => {
+    expect(divide(2,0)).toBe(Infinity);
+});
