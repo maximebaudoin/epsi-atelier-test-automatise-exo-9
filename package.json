@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "selenium-webdriver": "^4.22.0"
-  }
+    "scripts": {
+        "test": "node index.js && node test/test-front.js"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "nodemon": "^3.1.4",
+        "selenium-webdriver": "^4.22.0"
+    }
 }
