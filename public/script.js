@@ -18,21 +18,41 @@ function appendOperator(op) {
     currentInput = '';
 }
 
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    const result = a / b;
+    return Number(result.toFixed(16));
+}
+
 function calculate() {
     if (operator === null || currentInput === '' || previousInput === '') return;
     let result;
+    const num1 = parseFloat(previousInput);
+    const num2 = parseFloat(currentInput);
+    
     switch (operator) {
         case '+':
-            result = parseFloat(previousInput) + parseFloat(currentInput);
+            result = add(num1, num2);
             break;
         case '-':
-            result = parseFloat(previousInput) - parseFloat(currentInput);
+            result = subtract(num1, num2);
             break;
         case '*':
-            result = parseFloat(previousInput) * parseFloat(currentInput);
+            result = multiply(num1, num2);
             break;
         case '/':
-            result = parseFloat(previousInput) / parseFloat(currentInput);
+            result = divide(num1, num2);
             break;
         default:
             return;
@@ -58,3 +78,10 @@ function deleteLast() {
 function updateDisplay() {
     display.textContent = currentInput || '0';
 }
+
+module.exports = {
+    add,
+    subtract,
+    multiply,
+    divide
+};
