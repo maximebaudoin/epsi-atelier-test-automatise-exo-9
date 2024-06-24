@@ -1,3 +1,5 @@
+// Script JS qui effectue tous les calculs de la calculatrice
+
 let display = document.getElementById('display');
 let currentInput = '';
 let operator = null;
