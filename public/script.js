@@ -10,14 +10,6 @@ function appendNumber(number) {
     updateDisplay();
 }
 
-function appendOperator(op) {
-    if (currentInput === '') return;
-    if (operator !== null) calculate();
-    operator = op;
-    previousInput = currentInput;
-    currentInput = '';
-}
-
 function add(a, b) {
     return a + b;
 }
@@ -33,6 +25,21 @@ function multiply(a, b) {
 function divide(a, b) {
     const result = a / b;
     return Number(result.toFixed(16));
+}
+
+module.exports = {
+    add,
+    subtract,
+    multiply,
+    divide
+};
+
+function appendOperator(op) {
+    if (currentInput === '') return;
+    if (operator !== null) calculate();
+    operator = op;
+    previousInput = currentInput;
+    currentInput = '';
 }
 
 function calculate() {
@@ -78,10 +85,3 @@ function deleteLast() {
 function updateDisplay() {
     display.textContent = Math.round(currentInput * 100) / 100 || '0';
 }
-
-module.exports = {
-    add,
-    subtract,
-    multiply,
-    divide
-};

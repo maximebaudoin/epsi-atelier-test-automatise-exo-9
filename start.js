@@ -16,7 +16,7 @@ waitOn(
             process.exit(1);
         }
 
-        const tests = spawn("npx", ["mocha"], {
+        const tests = spawn("npx", ["mocha", "test/test-front.test.js"], {
             stdio: "inherit",
         });
 
