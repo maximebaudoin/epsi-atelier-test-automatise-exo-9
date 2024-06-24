@@ -1,4 +1,5 @@
 const { Builder, By, Browser } = require("selenium-webdriver");
+const chrome = require('selenium-webdriver/chrome');
 var assert = require('assert');
 
 describe("Selenium tests", function() {
