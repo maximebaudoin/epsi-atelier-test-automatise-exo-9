@@ -76,7 +76,7 @@ function deleteLast() {
 }
 
 function updateDisplay() {
-    display.textContent = currentInput || '0';
+    display.textContent = Math.round(currentInput * 100) / 100 || '0';
 }
 
 module.exports = {
