@@ -1,10 +1,18 @@
 {
     "scripts": {
-        "test": "node index.js && node test/test-front.js"
+        "test": "node index.js && node test/test-front.js",
+        "jest": "jest"
+    },
+    "jest":{
+        "testEnvironment": "jsdom"
     },
     "dependencies": {
         "express": "^4.19.2",
         "nodemon": "^3.1.4",
         "selenium-webdriver": "^4.22.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0"
     }
 }
