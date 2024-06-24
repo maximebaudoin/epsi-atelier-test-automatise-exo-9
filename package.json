@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "test": "node index.js && node test/test-front.js",
+        "start": "node index.js",
+        "test": "node start.js",
         "jest": "jest"
     },
     "jest":{
@@ -13,6 +14,10 @@
     },
     "devDependencies": {
         "jest": "^29.7.0",
-        "jest-environment-jsdom": "^29.7.0"
+        "jest-environment-jsdom": "^29.7.0",
+        "@types/selenium-webdriver": "^4.1.23",
+        "concurrently": "^8.2.2",
+        "mocha": "^10.4.0",
+        "wait-on": "^7.2.0"
     }
 }
