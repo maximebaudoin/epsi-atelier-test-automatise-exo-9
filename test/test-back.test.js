@@ -1,4 +1,5 @@
 // Tests de calcul pour la calculatrice
+// Script lancé à chaque merge vers la branche master
 
 const { add, subtract, multiply, divide } = require('../public/script');
 
